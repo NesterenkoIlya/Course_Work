@@ -1,5 +1,5 @@
 # Course_Work
 
-Course Work for 1 Course
+Course Work for 1st Course
 
 Neseterenko Ilya Eduardovich
