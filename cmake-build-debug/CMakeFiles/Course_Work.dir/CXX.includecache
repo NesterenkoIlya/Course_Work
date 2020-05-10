@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/athet/CLionProjects/Course_Work/Counter.cpp
-Counter.h
-/home/athet/CLionProjects/Course_Work/Counter.h
-
 /home/athet/CLionProjects/Course_Work/Counter.h
 
 /home/athet/CLionProjects/Course_Work/DigitalCounter.cpp
@@ -25,14 +21,12 @@ Counter.h
 /home/athet/CLionProjects/Course_Work/ElectricityCounter.cpp
 ElectricityCounter.h
 /home/athet/CLionProjects/Course_Work/ElectricityCounter.h
+cmath
+-
+iomanip
+-
 
 /home/athet/CLionProjects/Course_Work/ElectricityCounter.h
-DigitalCounter.h
-/home/athet/CLionProjects/Course_Work/DigitalCounter.h
-
-/home/athet/CLionProjects/Course_Work/main.cpp
-iostream
--
 DigitalCounter.h
 /home/athet/CLionProjects/Course_Work/DigitalCounter.h
 

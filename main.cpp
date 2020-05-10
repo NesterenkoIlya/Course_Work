@@ -1,5 +1,8 @@
 #include <iostream>
 #include "DigitalCounter.h"
+#include "ElectricityCounter.h"
+#include <cmath>
+#include <iomanip>
 
 using std::cin;
 using std::cout;
@@ -12,8 +15,5 @@ int main() {
 }
 
 void Debug() {
-	DigitalCounter obj(10, 20, 10);
-	obj.output();
-	obj++;
-	obj.output();
+
 }

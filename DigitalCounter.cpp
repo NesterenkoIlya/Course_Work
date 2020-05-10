@@ -1,9 +1,7 @@
 #include "DigitalCounter.h"
 
 void DigitalCounter::value_check() {
-	if (counter > max_value)
-		counter = min_value;
-	if (counter < min_value)
+	if (counter > max_value || counter < min_value)
 		counter = min_value;
 }
 
@@ -49,7 +47,6 @@ void DigitalCounter::output() {
 		<< endl;
 }
 
-//Переопределенный метод ToPrint для вывода информации об объекте класса
 void DigitalCounter::print_counter() {
 	cout << "Class DigitalCounter\n";
 	cout << "counter = " << counter;
@@ -108,11 +105,32 @@ DigitalCounter& operator-=(DigitalCounter& left, float right) {
 }
 
 istream& operator>>(istream& in, DigitalCounter& obj) {
-	cout << "Class DigitalCounter\n";
-	cout << "min_value: "; in >> obj.min_value;
-	cout << "max_value: "; in >> obj.max_value;
-	cout << "counter: "; in >> obj.counter;
-	obj.value_check();
+    bool check = 1;
+    while (true) {
+        cout << "min_value: "; in >> obj.min_value;
+        cout << "max_value: "; in >> obj.max_value;
+        cout << "counter: "; in >> obj.counter;
+
+        if (obj.max_value < obj.min_value)
+            cout << "You input incorrect max_value\n"
+                 << "max_value must be over " << obj.min_value;
+
+        if (obj.counter > obj.max_value || obj.counter < obj.min_value) {
+            check = 0;
+            cout << "You input incorrect counter\n"
+                 << "counter must be in diapasone from"
+                 << obj.min_value << " to " << obj.max_value;
+        }
+
+        if (check == 1) {
+            cout << "Input is correct\n";
+            break;
+        } else {
+            cout << "Input is uncorrect\n"
+                 << "Try again\n";
+        }
+    }
+
 	return in;
 }
 

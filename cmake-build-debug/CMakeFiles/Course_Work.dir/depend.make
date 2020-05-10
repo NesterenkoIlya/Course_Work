@@ -15,5 +15,6 @@ CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.o: ../ElectricityCounter.h
 
 CMakeFiles/Course_Work.dir/main.cpp.o: ../Counter.h
 CMakeFiles/Course_Work.dir/main.cpp.o: ../DigitalCounter.h
+CMakeFiles/Course_Work.dir/main.cpp.o: ../ElectricityCounter.h
 CMakeFiles/Course_Work.dir/main.cpp.o: ../main.cpp
 

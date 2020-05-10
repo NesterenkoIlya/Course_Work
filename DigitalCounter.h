@@ -6,14 +6,14 @@ using namespace std;
 #include "Counter.h"
 class DigitalCounter :
 	public Counter {
+    void value_check();
+protected:
 	int min_value;
 	int max_value;
-
-	void value_check();
 public:
 	DigitalCounter();
 	DigitalCounter(int, int, float);
-	DigitalCounter(DigitalCounter&);
+	DigitalCounter(DigitalCounter &);
 
 	void counter_increment();
 	void input();
@@ -28,11 +28,11 @@ public:
 	void operator()(int, int, float);
 	void operator++(int);
 	void operator--(int);
-	friend DigitalCounter& operator+=(DigitalCounter&, float);
-	friend DigitalCounter& operator-=(DigitalCounter&, float);
-	DigitalCounter& operator=(const DigitalCounter&);
-	friend istream& operator>>(istream&, DigitalCounter&);
-	friend ostream& operator<<(ostream&, DigitalCounter&);
+	friend DigitalCounter &operator+=(DigitalCounter &, float);
+	friend DigitalCounter &operator-=(DigitalCounter &, float);
+	DigitalCounter& operator=(const DigitalCounter &);
+	friend istream &operator>>(istream &, DigitalCounter &);
+	friend ostream &operator<<(ostream &, DigitalCounter &);
 
 	~DigitalCounter();
 };
