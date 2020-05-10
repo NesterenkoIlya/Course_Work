@@ -1,10 +1,11 @@
 #pragma once
 
 #include <iostream>
-#include "Counter.h"
 using namespace std;
 
-class DigitalCounter : public Counter {
+#include "Counter.h"
+class DigitalCounter :
+	public Counter {
 	int min_value;
 	int max_value;
 
@@ -19,7 +20,7 @@ public:
 	void output();
 
 	void print_counter() override;
-	
+
 	void set_min_value(int);
 	void set_max_value(int);
 	float get_counter();
@@ -35,3 +36,4 @@ public:
 
 	~DigitalCounter();
 };
+

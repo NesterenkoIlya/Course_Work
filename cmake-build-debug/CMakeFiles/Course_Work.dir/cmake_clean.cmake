@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Course_Work.dir/Digital_Counter.cpp.obj"
-  "CMakeFiles/Course_Work.dir/main.cpp.obj"
-  "Course_Work.exe"
-  "Course_Work.exe.manifest"
+  "CMakeFiles/Course_Work.dir/Counter.cpp.o"
+  "CMakeFiles/Course_Work.dir/DigitalCounter.cpp.o"
+  "CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.o"
+  "CMakeFiles/Course_Work.dir/main.cpp.o"
+  "Course_Work"
   "Course_Work.pdb"
-  "libCourse_Work.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

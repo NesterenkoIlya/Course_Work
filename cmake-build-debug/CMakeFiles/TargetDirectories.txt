@@ -1,3 +1,3 @@
-C:/Users/1/CLionProjects/Course_Work/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/1/CLionProjects/Course_Work/cmake-build-debug/CMakeFiles/Course_Work.dir
-C:/Users/1/CLionProjects/Course_Work/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/athet/CLionProjects/Course_Work/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/athet/CLionProjects/Course_Work/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/athet/CLionProjects/Course_Work/cmake-build-debug/CMakeFiles/Course_Work.dir

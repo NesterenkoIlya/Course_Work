@@ -1,7 +1,7 @@
 #pragma once
 #include "DigitalCounter.h"
 class ElectricityCounter :
-	public DigitalCounter
-{
+	public DigitalCounter {
+
 };
 
