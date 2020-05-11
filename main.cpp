@@ -4,16 +4,19 @@
 #include <cmath>
 #include <iomanip>
 
-using std::cin;
-using std::cout;
-using std::endl;
+using namespace std;
 
 void Debug();
 
 int main() {
+	system("chcp 1251");
 	Debug();
 }
 
 void Debug() {
-
+	cout << "ElectricityCounter Debug\n";
+	ElectricityCounter test;
+	cout << test;
+	cin >> test;
+	cout << test;
 }

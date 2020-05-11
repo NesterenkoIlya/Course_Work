@@ -1,0 +1,3 @@
+C:/Users/Athet/VSCodeProjects/Course_Work/build/CMakeFiles/edit_cache.dir
+C:/Users/Athet/VSCodeProjects/Course_Work/build/CMakeFiles/Course_Work.dir
+C:/Users/Athet/VSCodeProjects/Course_Work/build/CMakeFiles/rebuild_cache.dir

@@ -1,21 +1,15 @@
 #include "ElectricityCounter.h"
-#include <cmath>
-#include <iomanip>
-
-void ElectricityCounter::value_check() {
-
-}
 
 ElectricityCounter::ElectricityCounter() {
     bit_number = 1;
     precision = 0;
 }
 
-ElectricityCounter::ElectricityCounter(int min, int max, float c, int bit, int precis) :
+ElectricityCounter::ElectricityCounter(int min, int max, float c, int bit, int p) :
 DigitalCounter(min, max, c) {
     bit_number = bit;
-    precision = precis;
-    value_check();
+    precision = p;
+    
 }
 
 ElectricityCounter::ElectricityCounter(ElectricityCounter& obj) {
@@ -25,8 +19,26 @@ ElectricityCounter::ElectricityCounter(ElectricityCounter& obj) {
     precision = obj.precision;
 }
 
-ElectricityCounter &ElectricityCounter::operator=(const ElectricityCounter &) {
+void ElectricityCounter::print_counter() {
+    cout << setprecision(precision) << fixed
+        << "Class ElectricityCounter\n"
+        << "counter = " << counter
+        << setprecision(6);
+}
 
+ElectricityCounter &ElectricityCounter::operator=(const ElectricityCounter &obj) {
+    if (counter < min_value || counter > max_value) {
+        bool check = 0;
+        do {
+            cout << "You use incorrect counter\n"
+                << "counter must be over " << min_value
+                << " and under " << max_value << endl
+                << "Repeat input\ncounter: ";
+            cin >> counter;
+            if (counter >= min_value || counter <= max_value)
+                check = 1;
+        } while(!check);
+    }
     return *this;
 }
 
@@ -78,7 +90,6 @@ istream &operator>>(istream &in, ElectricityCounter &obj) {
 ostream &operator<<(ostream &out, ElectricityCounter &obj) {
     out << setprecision(obj.precision) << fixed;
     out << "Counter = " << obj.counter;
-    out << setprecision(6);
-
+    out << setprecision(6) << endl;
     return out;
 }

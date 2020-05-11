@@ -1,0 +1,25 @@
+[
+{
+  "directory": "C:/Users/Athet/VSCodeProjects/Course_Work/build",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\ENTERP~1\\VC\\Tools\\MSVC\\1425~1.286\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd   -std:c++latest /FoCMakeFiles\\Course_Work.dir\\main.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\Athet\\VSCodeProjects\\Course_Work\\main.cpp",
+  "file": "C:/Users/Athet/VSCodeProjects/Course_Work/main.cpp"
+},
+
+{
+  "directory": "C:/Users/Athet/VSCodeProjects/Course_Work/build",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\ENTERP~1\\VC\\Tools\\MSVC\\1425~1.286\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd   -std:c++latest /FoCMakeFiles\\Course_Work.dir\\Counter.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\Athet\\VSCodeProjects\\Course_Work\\Counter.cpp",
+  "file": "C:/Users/Athet/VSCodeProjects/Course_Work/Counter.cpp"
+},
+
+{
+  "directory": "C:/Users/Athet/VSCodeProjects/Course_Work/build",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\ENTERP~1\\VC\\Tools\\MSVC\\1425~1.286\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd   -std:c++latest /FoCMakeFiles\\Course_Work.dir\\DigitalCounter.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\Athet\\VSCodeProjects\\Course_Work\\DigitalCounter.cpp",
+  "file": "C:/Users/Athet/VSCodeProjects/Course_Work/DigitalCounter.cpp"
+},
+
+{
+  "directory": "C:/Users/Athet/VSCodeProjects/Course_Work/build",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\ENTERP~1\\VC\\Tools\\MSVC\\1425~1.286\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd   -std:c++latest /FoCMakeFiles\\Course_Work.dir\\ElectricityCounter.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\Athet\\VSCodeProjects\\Course_Work\\ElectricityCounter.cpp",
+  "file": "C:/Users/Athet/VSCodeProjects/Course_Work/ElectricityCounter.cpp"
+}
+]

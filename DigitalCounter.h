@@ -1,9 +1,6 @@
 #pragma once
-
-#include <iostream>
-using namespace std;
-
 #include "Counter.h"
+
 class DigitalCounter :
 	public Counter {
     void value_check();
@@ -28,12 +25,11 @@ public:
 	void operator()(int, int, float);
 	void operator++(int);
 	void operator--(int);
-	friend DigitalCounter &operator+=(DigitalCounter &, float);
-	friend DigitalCounter &operator-=(DigitalCounter &, float);
+	DigitalCounter& operator+=(float);
+	DigitalCounter& operator-=(float);
 	DigitalCounter& operator=(const DigitalCounter &);
 	friend istream &operator>>(istream &, DigitalCounter &);
 	friend ostream &operator<<(ostream &, DigitalCounter &);
 
-	~DigitalCounter();
+	virtual ~DigitalCounter();
 };
-

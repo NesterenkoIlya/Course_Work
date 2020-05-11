@@ -19,7 +19,7 @@ DigitalCounter::DigitalCounter(int min, int max, float c) {
 	value_check();
 }
 
-DigitalCounter::DigitalCounter(DigitalCounter& obj) {
+DigitalCounter::DigitalCounter(DigitalCounter &obj) {
 	counter = obj.counter;
 	min_value = obj.min_value;
 	max_value = obj.max_value;
@@ -48,8 +48,9 @@ void DigitalCounter::output() {
 }
 
 void DigitalCounter::print_counter() {
-	cout << "Class DigitalCounter\n";
-	cout << "counter = " << counter;
+	cout << "Class DigitalCounter\n"
+		<< "counter = " << counter
+		<< endl;
 }
 
 void DigitalCounter::set_min_value(int min) {
@@ -92,19 +93,19 @@ DigitalCounter::~DigitalCounter() {
 	cout << "Destructor DigitalCounter\n";
 }
 
-DigitalCounter& operator+=(DigitalCounter& left, float right) {
-	left.counter += right;
-	left.value_check();
-	return left;
+DigitalCounter& DigitalCounter::operator+=(float right) {
+	counter += right;
+	value_check();
+	return *this;
 }
 
-DigitalCounter& operator-=(DigitalCounter& left, float right) {
-	left.counter -= right;
-	left.value_check();
-	return left;
+DigitalCounter& DigitalCounter::operator-=(float right) {
+	counter -= right;
+	value_check();
+	return *this;
 }
 
-istream& operator>>(istream& in, DigitalCounter& obj) {
+istream& operator>>(istream &in, DigitalCounter &obj) {
     bool check = 1;
     while (true) {
         cout << "min_value: "; in >> obj.min_value;
