@@ -1,6 +1,7 @@
 #include "ElectricityCounter.h"
 
 ElectricityCounter::ElectricityCounter() {
+    DigitalCounter(0, 0, 0);
     bit_number = 1;
     precision = 0;
 }
@@ -9,7 +10,6 @@ ElectricityCounter::ElectricityCounter(int min, int max, float c, int bit, int p
 DigitalCounter(min, max, c) {
     bit_number = bit;
     precision = p;
-    
 }
 
 ElectricityCounter::ElectricityCounter(ElectricityCounter& obj) {
@@ -24,6 +24,7 @@ void ElectricityCounter::print_counter() {
         << "Class ElectricityCounter\n"
         << "counter = " << counter
         << setprecision(6);
+    cout.unsetf(ios::fixed);
 }
 
 ElectricityCounter &ElectricityCounter::operator=(const ElectricityCounter &obj) {
@@ -40,6 +41,15 @@ ElectricityCounter &ElectricityCounter::operator=(const ElectricityCounter &obj)
         } while(!check);
     }
     return *this;
+}
+
+// ElectricityCounter &ElectricityCounter::operator-(const ElectricityCounter&) {
+
+//     return *this;
+// }
+
+ElectricityCounter::~ElectricityCounter() {
+    cout << "Destructor ElectricityCounter\n";
 }
 
 istream &operator>>(istream &in, ElectricityCounter &obj) {
@@ -90,6 +100,7 @@ istream &operator>>(istream &in, ElectricityCounter &obj) {
 ostream &operator<<(ostream &out, ElectricityCounter &obj) {
     out << setprecision(obj.precision) << fixed;
     out << "Counter = " << obj.counter;
-    out << setprecision(6) << endl;
+    out << setprecision(6); //Стандартный setprecision
+    out.unsetf(ios::fixed); //Убирает флаг fixed из потока
     return out;
 }

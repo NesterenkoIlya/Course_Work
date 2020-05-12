@@ -1,7 +1,7 @@
 #include "DigitalCounter.h"
 
 void DigitalCounter::value_check() {
-	if (counter > max_value || counter < min_value)
+	if (counter > max_value)
 		counter = min_value;
 }
 
@@ -22,8 +22,6 @@ DigitalCounter::DigitalCounter(int min, int max, float c) {
 DigitalCounter::DigitalCounter(DigitalCounter &obj) {
 	counter = obj.counter;
 	min_value = obj.min_value;
-	max_value = obj.max_value;
-	value_check();
 }
 
 void DigitalCounter::counter_increment() {

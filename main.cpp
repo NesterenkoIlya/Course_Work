@@ -1,8 +1,10 @@
 #include <iostream>
-#include "DigitalCounter.h"
-#include "ElectricityCounter.h"
 #include <cmath>
 #include <iomanip>
+
+#include "DigitalCounter.h"
+#include "ElectricityCounter.h"
+#include "AccountBook.h"
 
 using namespace std;
 
@@ -14,9 +16,6 @@ int main() {
 }
 
 void Debug() {
-	cout << "ElectricityCounter Debug\n";
-	ElectricityCounter test;
-	cout << test;
-	cin >> test;
-	cout << test;
+	AccountBook test(0, 0, 0, 0);
+
 }

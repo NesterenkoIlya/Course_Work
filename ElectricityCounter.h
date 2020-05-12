@@ -16,7 +16,5 @@ public:
     ElectricityCounter &operator=(const ElectricityCounter&);
     //ElectricityCounter &operator-(const ElectricityCounter&);
 
-    virtual ~ElectricityCounter() {
-        cout << "Destructor ElectricityCounter\n";
-    }
+    virtual ~ElectricityCounter();
 };
