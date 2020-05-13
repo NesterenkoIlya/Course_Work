@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Course_Work.dir/AccountBook.cpp.o"
   "CMakeFiles/Course_Work.dir/Counter.cpp.o"
   "CMakeFiles/Course_Work.dir/DigitalCounter.cpp.o"
   "CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.o"

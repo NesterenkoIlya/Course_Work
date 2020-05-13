@@ -4,10 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/athet/CLionProjects/Course_Work/Counter.cpp" "/home/athet/CLionProjects/Course_Work/cmake-build-debug/CMakeFiles/Course_Work.dir/Counter.cpp.o"
-  "/home/athet/CLionProjects/Course_Work/DigitalCounter.cpp" "/home/athet/CLionProjects/Course_Work/cmake-build-debug/CMakeFiles/Course_Work.dir/DigitalCounter.cpp.o"
-  "/home/athet/CLionProjects/Course_Work/ElectricityCounter.cpp" "/home/athet/CLionProjects/Course_Work/cmake-build-debug/CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.o"
-  "/home/athet/CLionProjects/Course_Work/main.cpp" "/home/athet/CLionProjects/Course_Work/cmake-build-debug/CMakeFiles/Course_Work.dir/main.cpp.o"
+  "/home/athet/CLionProjects/git/Course_Work/AccountBook.cpp" "/home/athet/CLionProjects/git/Course_Work/cmake-build-debug/CMakeFiles/Course_Work.dir/AccountBook.cpp.o"
+  "/home/athet/CLionProjects/git/Course_Work/Counter.cpp" "/home/athet/CLionProjects/git/Course_Work/cmake-build-debug/CMakeFiles/Course_Work.dir/Counter.cpp.o"
+  "/home/athet/CLionProjects/git/Course_Work/DigitalCounter.cpp" "/home/athet/CLionProjects/git/Course_Work/cmake-build-debug/CMakeFiles/Course_Work.dir/DigitalCounter.cpp.o"
+  "/home/athet/CLionProjects/git/Course_Work/ElectricityCounter.cpp" "/home/athet/CLionProjects/git/Course_Work/cmake-build-debug/CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.o"
+  "/home/athet/CLionProjects/git/Course_Work/main.cpp" "/home/athet/CLionProjects/git/Course_Work/cmake-build-debug/CMakeFiles/Course_Work.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

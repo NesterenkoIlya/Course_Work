@@ -24,8 +24,8 @@ public:
     void add_elem_begin(ElectricityCounter&);
     void add_elem_end(ElectricityCounter&);
 
-    // bool data_check();
-    // void data_input(); //беды с датой
+    //bool data_check();
+    void date_check(); //беды с датой
 
     int get_lenght();
 

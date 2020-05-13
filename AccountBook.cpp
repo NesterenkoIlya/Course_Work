@@ -111,20 +111,22 @@ void AccountBook::add_elem_end(ElectricityCounter& elem) {
     add_element(elem, lenght);
 }
 
-void AccountBook::data_input() {
-    bool check = 0;
+void AccountBook::date_check() {
+    bool check;
     string day_diapasone;
-    // while(!check) {
-    //     cout << "Enter date:\n";
-    //     cout << "\tyear from 1: "; cin >> date.year;
-    //     cout << "\tmonth from 1 to 12: "; cin >> date.month;
-    //     if (date.year % 4 == 0 && date.month == 2)
-    //         day_diapasone = "from 1 to 29: ";
-    //     if (date.month == 2)
-    //         day_diapasone = "from 1 to 28: ";
-    //     else if (date.month == 1 || date.month == 3 || date.month == 5 || date.month == 7 || date.month == 8 || date.month == 10 || date.month == 12)
-    //         day_diapasone = "from 1 to 30: ";
-    // }
+
+    while(true) {
+        if (check == 0)
+            check = 1;
+        else
+            break;
+
+        if ((date.day > 30 && (date.month == 4 || date.month == 6 || date.month == 9 || date.month == 11))
+            || date.day < 1 || date.day > 31) {
+            check = 0;
+            cout << "Enter correct day: "; cin >> date.day;
+        } else if (date.day == 30 && (date.month == ))
+    }
     //Беды с датой
 }
 

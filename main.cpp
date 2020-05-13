@@ -17,5 +17,5 @@ int main() {
 
 void Debug() {
 	AccountBook test(0, 0, 0, 0);
-
+    test.date_input();
 }

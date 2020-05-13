@@ -48,10 +48,10 @@ RM = /snap/clion/112/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/athet/CLionProjects/Course_Work
+CMAKE_SOURCE_DIR = /home/athet/CLionProjects/git/Course_Work
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/athet/CLionProjects/Course_Work/cmake-build-debug
+CMAKE_BINARY_DIR = /home/athet/CLionProjects/git/Course_Work/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/athet/CLionProjects/Course_Work/cmake-build-debug/CMakeFiles /home/athet/CLionProjects/Course_Work/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/athet/CLionProjects/git/Course_Work/cmake-build-debug/CMakeFiles /home/athet/CLionProjects/git/Course_Work/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/athet/CLionProjects/Course_Work/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/athet/CLionProjects/git/Course_Work/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,6 +122,33 @@ Course_Work: cmake_check_build_system
 Course_Work/fast:
 	$(MAKE) -f CMakeFiles/Course_Work.dir/build.make CMakeFiles/Course_Work.dir/build
 .PHONY : Course_Work/fast
+
+AccountBook.o: AccountBook.cpp.o
+
+.PHONY : AccountBook.o
+
+# target to build an object file
+AccountBook.cpp.o:
+	$(MAKE) -f CMakeFiles/Course_Work.dir/build.make CMakeFiles/Course_Work.dir/AccountBook.cpp.o
+.PHONY : AccountBook.cpp.o
+
+AccountBook.i: AccountBook.cpp.i
+
+.PHONY : AccountBook.i
+
+# target to preprocess a source file
+AccountBook.cpp.i:
+	$(MAKE) -f CMakeFiles/Course_Work.dir/build.make CMakeFiles/Course_Work.dir/AccountBook.cpp.i
+.PHONY : AccountBook.cpp.i
+
+AccountBook.s: AccountBook.cpp.s
+
+.PHONY : AccountBook.s
+
+# target to generate assembly for a file
+AccountBook.cpp.s:
+	$(MAKE) -f CMakeFiles/Course_Work.dir/build.make CMakeFiles/Course_Work.dir/AccountBook.cpp.s
+.PHONY : AccountBook.cpp.s
 
 Counter.o: Counter.cpp.o
 
@@ -240,6 +267,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Course_Work"
+	@echo "... AccountBook.o"
+	@echo "... AccountBook.i"
+	@echo "... AccountBook.s"
 	@echo "... Counter.o"
 	@echo "... Counter.i"
 	@echo "... Counter.s"
