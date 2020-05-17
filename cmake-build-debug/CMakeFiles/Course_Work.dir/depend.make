@@ -6,6 +6,7 @@ CMakeFiles/Course_Work.dir/AccountBook.cpp.o: ../AccountBook.h
 CMakeFiles/Course_Work.dir/AccountBook.cpp.o: ../Counter.h
 CMakeFiles/Course_Work.dir/AccountBook.cpp.o: ../DigitalCounter.h
 CMakeFiles/Course_Work.dir/AccountBook.cpp.o: ../ElectricityCounter.h
+CMakeFiles/Course_Work.dir/AccountBook.cpp.o: ../Iter.h
 
 CMakeFiles/Course_Work.dir/Counter.cpp.o: ../Counter.cpp
 CMakeFiles/Course_Work.dir/Counter.cpp.o: ../Counter.h
@@ -19,9 +20,16 @@ CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.o: ../DigitalCounter.h
 CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.o: ../ElectricityCounter.cpp
 CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.o: ../ElectricityCounter.h
 
+CMakeFiles/Course_Work.dir/Iter.cpp.o: ../Counter.h
+CMakeFiles/Course_Work.dir/Iter.cpp.o: ../DigitalCounter.h
+CMakeFiles/Course_Work.dir/Iter.cpp.o: ../ElectricityCounter.h
+CMakeFiles/Course_Work.dir/Iter.cpp.o: ../Iter.cpp
+CMakeFiles/Course_Work.dir/Iter.cpp.o: ../Iter.h
+
 CMakeFiles/Course_Work.dir/main.cpp.o: ../AccountBook.h
 CMakeFiles/Course_Work.dir/main.cpp.o: ../Counter.h
 CMakeFiles/Course_Work.dir/main.cpp.o: ../DigitalCounter.h
 CMakeFiles/Course_Work.dir/main.cpp.o: ../ElectricityCounter.h
+CMakeFiles/Course_Work.dir/main.cpp.o: ../Iter.h
 CMakeFiles/Course_Work.dir/main.cpp.o: ../main.cpp
 

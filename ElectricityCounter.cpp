@@ -2,44 +2,51 @@
 
 ElectricityCounter::ElectricityCounter() {
     DigitalCounter(0, 0, 0);
-    bit_number = 1;
-    precision = 0;
+    m_bit_number = 1;
+    m_precision = 0;
 }
 
 ElectricityCounter::ElectricityCounter(int min, int max, float c, int bit, int p) :
 DigitalCounter(min, max, c) {
-    bit_number = bit;
-    precision = p;
+    m_bit_number = bit;
+    m_precision = p;
 }
 
 ElectricityCounter::ElectricityCounter(ElectricityCounter& obj) {
-    min_value = obj.min_value;
-    max_value = obj.max_value;
-    bit_number = obj.bit_number;
-    precision = obj.precision;
+    m_min_value = obj.m_min_value;
+    m_max_value = obj.m_max_value;
+    m_bit_number = obj.m_bit_number;
+    m_precision = obj.m_precision;
 }
 
 void ElectricityCounter::print_counter() {
-    cout << setprecision(precision) << fixed
-        << "Class ElectricityCounter\n"
-        << "counter = " << counter
+    cout << setprecision(m_precision) << fixed
+         << "Class ElectricityCounter\n"
+         << "counter = " << m_counter
         << setprecision(6);
     cout.unsetf(ios::fixed);
 }
 
-ElectricityCounter &ElectricityCounter::operator=(const ElectricityCounter &obj) {
-    if (counter < min_value || counter > max_value) {
-        bool check = 0;
-        do {
-            cout << "You use incorrect counter\n"
-                << "counter must be over " << min_value
-                << " and under " << max_value << endl
-                << "Repeat input\ncounter: ";
-            cin >> counter;
-            if (counter >= min_value || counter <= max_value)
-                check = 1;
-        } while(!check);
+void ElectricityCounter::operator=(float c) {
+    while(true) {
+        if (c >= m_min_value && c <= m_max_value) {
+            m_counter = c;
+            break;
+        }
+        cout << "Вы используете неправильное значение счетчика\n"
+             << "счетчик должен быть больше " << m_min_value << " и меньше " << m_max_value << endl
+            << "Повторите ввод\n"
+            << "counter: ";
+        cin >> c;
     }
+}
+
+ElectricityCounter &ElectricityCounter::operator=(const ElectricityCounter &obj) {
+    m_counter = obj.m_counter;
+    m_min_value = obj.m_min_value;
+    m_max_value = obj.m_max_value;
+    m_bit_number = obj.m_bit_number;
+    m_precision = obj.m_precision;
     return *this;
 }
 
@@ -55,35 +62,35 @@ ElectricityCounter::~ElectricityCounter() {
 istream &operator>>(istream &in, ElectricityCounter &obj) {
     bool check = 1;
     while (true) {
-        cout << "bit_number: "; in >> obj.bit_number;
-        cout << "precision: "; in >> obj.precision;
-        cout << "min_value: "; in >> obj.min_value;
-        cout << "max_value: "; in >> obj.max_value;
-        cout << "counter: "; in >> obj.counter;
+        cout << "bit_number: "; in >> obj.m_bit_number;
+        cout << "precision: "; in >> obj.m_precision;
+        cout << "min_value: "; in >> obj.m_min_value;
+        cout << "max_value: "; in >> obj.m_max_value;
+        cout << "counter: "; in >> obj.m_counter;
 
-        if (obj.bit_number < 1) {
+        if (obj.m_bit_number < 1) {
             check = 0;
             cout << "You input incorrect bit_number\n"
                  << "bit_number must be over 1\n";
         }
 
-        if (obj.precision < 0) {
+        if (obj.m_precision < 0) {
             check = 0;
             cout << "You input incorrect precision\n"
                  << "precision must be over 0\n";
         }
 
-        int power = pow(10,obj.bit_number);
-        if (obj.max_value > power || obj.max_value < obj.min_value)
+        int power = pow(10,obj.m_bit_number);
+        if (obj.m_max_value > power || obj.m_max_value < obj.m_min_value)
             cout << "You input incorrect max_value\n"
-                << "max_value must be over " << obj.min_value
+                << "max_value must be over " << obj.m_min_value
                 << "and under " << power;
 
-        if (obj.counter > obj.max_value || obj.counter < obj.min_value) {
+        if (obj.m_counter > obj.m_max_value || obj.m_counter < obj.m_min_value) {
             check = 0;
             cout << "You input incorrect counter\n"
                  << "counter must be in diapasone from"
-                 << obj.min_value << " to " << obj.max_value;
+                 << obj.m_min_value << " to " << obj.m_max_value;
         }
 
         if (check == 1) {
@@ -98,8 +105,9 @@ istream &operator>>(istream &in, ElectricityCounter &obj) {
 }
 
 ostream &operator<<(ostream &out, ElectricityCounter &obj) {
-    out << setprecision(obj.precision) << fixed;
-    out << "Counter = " << obj.counter;
+    out << setprecision(obj.m_precision) << fixed;
+    out << "Counter = " << obj.m_counter << endl;
+    out << obj.m_max_value << endl;
     out << setprecision(6); //Стандартный setprecision
     out.unsetf(ios::fixed); //Убирает флаг fixed из потока
     return out;

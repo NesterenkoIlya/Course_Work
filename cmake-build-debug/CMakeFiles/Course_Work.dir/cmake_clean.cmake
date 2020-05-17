@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Course_Work.dir/Counter.cpp.o"
   "CMakeFiles/Course_Work.dir/DigitalCounter.cpp.o"
   "CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.o"
+  "CMakeFiles/Course_Work.dir/Iter.cpp.o"
   "CMakeFiles/Course_Work.dir/main.cpp.o"
   "Course_Work"
   "Course_Work.pdb"

@@ -5,8 +5,8 @@ class DigitalCounter :
 	public Counter {
     void value_check();
 protected:
-	int min_value;
-	int max_value;
+	int m_min_value;
+	int m_max_value;
 public:
 	DigitalCounter();
 	DigitalCounter(int, int, float);

@@ -6,7 +6,7 @@ using namespace std;
 
 class Counter {
 public:
-	float counter;
+	float m_counter;
 	
 	virtual void print_counter() = 0;
 

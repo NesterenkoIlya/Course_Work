@@ -2,8 +2,8 @@
 #include "DigitalCounter.h"
 class ElectricityCounter :
 	public DigitalCounter {
-    int bit_number;
-    int precision;
+    int m_bit_number;
+    int m_precision;
 public:
     ElectricityCounter();
     ElectricityCounter(int, int, float, int, int);
@@ -13,6 +13,7 @@ public:
 
     friend istream &operator>>(istream &, ElectricityCounter &);
     friend ostream &operator<<(ostream &, ElectricityCounter &);
+    void operator=(float);
     ElectricityCounter &operator=(const ElectricityCounter&);
     //ElectricityCounter &operator-(const ElectricityCounter&);
 

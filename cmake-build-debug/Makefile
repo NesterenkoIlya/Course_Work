@@ -231,6 +231,33 @@ ElectricityCounter.cpp.s:
 	$(MAKE) -f CMakeFiles/Course_Work.dir/build.make CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.s
 .PHONY : ElectricityCounter.cpp.s
 
+Iter.o: Iter.cpp.o
+
+.PHONY : Iter.o
+
+# target to build an object file
+Iter.cpp.o:
+	$(MAKE) -f CMakeFiles/Course_Work.dir/build.make CMakeFiles/Course_Work.dir/Iter.cpp.o
+.PHONY : Iter.cpp.o
+
+Iter.i: Iter.cpp.i
+
+.PHONY : Iter.i
+
+# target to preprocess a source file
+Iter.cpp.i:
+	$(MAKE) -f CMakeFiles/Course_Work.dir/build.make CMakeFiles/Course_Work.dir/Iter.cpp.i
+.PHONY : Iter.cpp.i
+
+Iter.s: Iter.cpp.s
+
+.PHONY : Iter.s
+
+# target to generate assembly for a file
+Iter.cpp.s:
+	$(MAKE) -f CMakeFiles/Course_Work.dir/build.make CMakeFiles/Course_Work.dir/Iter.cpp.s
+.PHONY : Iter.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -279,6 +306,9 @@ help:
 	@echo "... ElectricityCounter.o"
 	@echo "... ElectricityCounter.i"
 	@echo "... ElectricityCounter.s"
+	@echo "... Iter.o"
+	@echo "... Iter.i"
+	@echo "... Iter.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

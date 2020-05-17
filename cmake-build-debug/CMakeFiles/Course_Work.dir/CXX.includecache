@@ -11,8 +11,8 @@ AccountBook.h
 /home/athet/CLionProjects/git/Course_Work/AccountBook.h
 
 /home/athet/CLionProjects/git/Course_Work/AccountBook.h
-ElectricityCounter.h
-/home/athet/CLionProjects/git/Course_Work/ElectricityCounter.h
+Iter.h
+/home/athet/CLionProjects/git/Course_Work/Iter.h
 
 /home/athet/CLionProjects/git/Course_Work/Counter.h
 iostream
@@ -29,4 +29,28 @@ Counter.h
 /home/athet/CLionProjects/git/Course_Work/ElectricityCounter.h
 DigitalCounter.h
 /home/athet/CLionProjects/git/Course_Work/DigitalCounter.h
+
+/home/athet/CLionProjects/git/Course_Work/Iter.cpp
+Iter.h
+/home/athet/CLionProjects/git/Course_Work/Iter.h
+
+/home/athet/CLionProjects/git/Course_Work/Iter.h
+ElectricityCounter.h
+/home/athet/CLionProjects/git/Course_Work/ElectricityCounter.h
+
+/home/athet/CLionProjects/git/Course_Work/main.cpp
+iostream
+-
+cmath
+-
+iomanip
+-
+time.h
+-
+DigitalCounter.h
+/home/athet/CLionProjects/git/Course_Work/DigitalCounter.h
+ElectricityCounter.h
+/home/athet/CLionProjects/git/Course_Work/ElectricityCounter.h
+AccountBook.h
+/home/athet/CLionProjects/git/Course_Work/AccountBook.h
 

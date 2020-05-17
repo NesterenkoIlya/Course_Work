@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <iomanip>
+#include <time.h>
 
 #include "DigitalCounter.h"
 #include "ElectricityCounter.h"
@@ -16,6 +17,7 @@ int main() {
 }
 
 void Debug() {
-	AccountBook test(0, 0, 0, 0);
-    test.date_input();
+	AccountBook test(1, 5, 5, 5);
+	ElectricityCounter ttt(0, 999, 9, 4, 2);
+	test.add_elem_end(ttt);
 }

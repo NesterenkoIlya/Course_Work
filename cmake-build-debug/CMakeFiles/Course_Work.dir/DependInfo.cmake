@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/athet/CLionProjects/git/Course_Work/Counter.cpp" "/home/athet/CLionProjects/git/Course_Work/cmake-build-debug/CMakeFiles/Course_Work.dir/Counter.cpp.o"
   "/home/athet/CLionProjects/git/Course_Work/DigitalCounter.cpp" "/home/athet/CLionProjects/git/Course_Work/cmake-build-debug/CMakeFiles/Course_Work.dir/DigitalCounter.cpp.o"
   "/home/athet/CLionProjects/git/Course_Work/ElectricityCounter.cpp" "/home/athet/CLionProjects/git/Course_Work/cmake-build-debug/CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.o"
+  "/home/athet/CLionProjects/git/Course_Work/Iter.cpp" "/home/athet/CLionProjects/git/Course_Work/cmake-build-debug/CMakeFiles/Course_Work.dir/Iter.cpp.o"
   "/home/athet/CLionProjects/git/Course_Work/main.cpp" "/home/athet/CLionProjects/git/Course_Work/cmake-build-debug/CMakeFiles/Course_Work.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

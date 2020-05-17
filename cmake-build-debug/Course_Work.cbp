@@ -106,6 +106,12 @@
 		<Unit filename="/home/athet/CLionProjects/git/Course_Work/ElectricityCounter.h">
 			<Option target="Course_Work"/>
 		</Unit>
+		<Unit filename="/home/athet/CLionProjects/git/Course_Work/Iter.cpp">
+			<Option target="Course_Work"/>
+		</Unit>
+		<Unit filename="/home/athet/CLionProjects/git/Course_Work/Iter.h">
+			<Option target="Course_Work"/>
+		</Unit>
 		<Unit filename="/home/athet/CLionProjects/git/Course_Work/main.cpp">
 			<Option target="Course_Work"/>
 		</Unit>
