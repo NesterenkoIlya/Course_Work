@@ -13,9 +13,16 @@ DigitalCounter::DigitalCounter() {
 }
 
 DigitalCounter::DigitalCounter(int min, int max, float c) {
-    m_min_value = min;
-    m_max_value = max;
-    m_counter = c;
+    bool check = 0;
+    while (true) {
+        if (check == 0)
+            check = 1;
+        else
+            break;
+        if (min > max) {}
+        check = 0;
+        cout << "Вы используете неправильное "
+    }
 	value_check();
 }
 
@@ -34,6 +41,18 @@ void DigitalCounter::input() {
 	cout << "min_value: "; cin >> m_min_value;
 	cout << "max_value: "; cin >> m_max_value;
 	cout << "counter: "; cin >> m_counter;
+	bool check = 0;
+	while(true) {
+	    if (check == 0)
+	        check = 1;
+	    else
+	        break;
+        if (m_min_value > m_max_value) {
+            check = 0;
+            cout << "Вы ввели неправилное минимальное значение\n"
+                 << "минимальное значение должно быть меньше
+        }
+	}
 	value_check();
 }
 
@@ -42,7 +61,7 @@ void DigitalCounter::output() {
          << "min_vlaue = " << m_min_value
          << "\nmax_value = " << m_max_value
          << "\ncounter = " << m_counter
-		<< endl;
+		 << endl;
 }
 
 void DigitalCounter::print_counter() {

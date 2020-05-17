@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/athet/CLionProjects/git/Course_Work/AccountBook.cpp
-AccountBook.h
-/home/athet/CLionProjects/git/Course_Work/AccountBook.h
-
 /home/athet/CLionProjects/git/Course_Work/AccountBook.h
 Iter.h
 /home/athet/CLionProjects/git/Course_Work/Iter.h
@@ -29,10 +25,6 @@ Counter.h
 /home/athet/CLionProjects/git/Course_Work/ElectricityCounter.h
 DigitalCounter.h
 /home/athet/CLionProjects/git/Course_Work/DigitalCounter.h
-
-/home/athet/CLionProjects/git/Course_Work/Iter.cpp
-Iter.h
-/home/athet/CLionProjects/git/Course_Work/Iter.h
 
 /home/athet/CLionProjects/git/Course_Work/Iter.h
 ElectricityCounter.h

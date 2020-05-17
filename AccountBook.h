@@ -3,7 +3,7 @@
 #include "Iter.h"
 
 class AccountBook {
-    int m_lenght;
+    int m_length;
     ElectricityCounter *m_accounts;
     float m_price;
     struct Date {
@@ -11,7 +11,8 @@ class AccountBook {
         int month;
         int year;
         Date();
-    } m_date;
+        Date(int, int, int);
+    } *m_date;
 public:
     AccountBook();
     AccountBook(int, int, int, int);
@@ -23,6 +24,9 @@ public:
     void remove_element(Iter);
     void add_elem_begin(ElectricityCounter&);
     void add_elem_end(ElectricityCounter&);
+
+    void set_price(float);
+    float get_price();
 
     float sum_all();
     float price_all();

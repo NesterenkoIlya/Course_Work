@@ -2,7 +2,7 @@
 #include "DigitalCounter.h"
 class ElectricityCounter :
 	public DigitalCounter {
-    int m_bit_number;
+    int *m_bit_number;
     int m_precision;
 public:
     ElectricityCounter();
@@ -15,7 +15,12 @@ public:
     friend ostream &operator<<(ostream &, ElectricityCounter &);
     void operator=(float);
     ElectricityCounter &operator=(const ElectricityCounter&);
-    //ElectricityCounter &operator-(const ElectricityCounter&);
+    float operator*();
+
+    void set_bit_number(int*);
+    int get_bit_number();
+    void set_precision(int);
+    int get_precision();
 
     virtual ~ElectricityCounter();
 };

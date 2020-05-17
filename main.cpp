@@ -17,7 +17,5 @@ int main() {
 }
 
 void Debug() {
-	AccountBook test(1, 5, 5, 5);
-	ElectricityCounter ttt(0, 999, 9, 4, 2);
-	test.add_elem_end(ttt);
+
 }
