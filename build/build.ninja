@@ -84,6 +84,13 @@ build CMakeFiles\Course_Work.dir\AccountBook.cpp.obj: CXX_COMPILER__Course_Work 
   TARGET_COMPILE_PDB = CMakeFiles\Course_Work.dir\
   TARGET_PDB = Course_Work.pdb
 
+build CMakeFiles\Course_Work.dir\Iter.cpp.obj: CXX_COMPILER__Course_Work ..\Iter.cpp || cmake_object_order_depends_target_Course_Work
+  FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd   -std:c++latest
+  OBJECT_DIR = CMakeFiles\Course_Work.dir
+  OBJECT_FILE_DIR = CMakeFiles\Course_Work.dir
+  TARGET_COMPILE_PDB = CMakeFiles\Course_Work.dir\
+  TARGET_PDB = Course_Work.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Course_Work
@@ -92,7 +99,7 @@ build CMakeFiles\Course_Work.dir\AccountBook.cpp.obj: CXX_COMPILER__Course_Work 
 #############################################
 # Link the executable Course_Work.exe
 
-build Course_Work.exe: CXX_EXECUTABLE_LINKER__Course_Work CMakeFiles\Course_Work.dir\main.cpp.obj CMakeFiles\Course_Work.dir\Counter.cpp.obj CMakeFiles\Course_Work.dir\DigitalCounter.cpp.obj CMakeFiles\Course_Work.dir\ElectricityCounter.cpp.obj CMakeFiles\Course_Work.dir\AccountBook.cpp.obj
+build Course_Work.exe: CXX_EXECUTABLE_LINKER__Course_Work CMakeFiles\Course_Work.dir\main.cpp.obj CMakeFiles\Course_Work.dir\Counter.cpp.obj CMakeFiles\Course_Work.dir\DigitalCounter.cpp.obj CMakeFiles\Course_Work.dir\ElectricityCounter.cpp.obj CMakeFiles\Course_Work.dir\AccountBook.cpp.obj CMakeFiles\Course_Work.dir\Iter.cpp.obj
   FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

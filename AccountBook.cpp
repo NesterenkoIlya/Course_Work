@@ -37,9 +37,12 @@ AccountBook::AccountBook(int length, int d, int m, int y) {
 
 AccountBook::AccountBook(const AccountBook& obj) {
     m_length = obj.m_length;
-    m_accounts = new ElectricityCounter[m_length];
-    for (Iter i(begin()); i != end(); ++i)
-        *i = obj.m_accounts[i - begin()];
+    if (obj.m_accounts) {
+        m_accounts = new ElectricityCounter[m_length];
+        for (Iter i(begin()); i != end(); ++i)
+            *i = obj.m_accounts[i - begin()];
+    } else
+        m_accounts = nullptr;
 }
 
 void AccountBook::erase() {
@@ -122,17 +125,14 @@ void AccountBook::date_check() {
             cout << "Введите правильный день недели: ";
             cin >> m_date->day;
         } else if (m_date->month == 2 && m_date->day > 28) {
-            if ((m_date->year % 400 == 0) ? true : (m_date->year % 4 == 0 && m_date->year % 100 != 0) && m_date->day > 29) {
-                check = 0;
-                cout << "Введите правильный день недели: ";
-                cin >> m_date->day;
+            if ((m_date->year % 400 == 0) ? true : (m_date->year % 4 == 0 && m_date->year % 100 != 0) && m_date->day == 29) {
+                check = 1;
             } else if (m_date->day > 28) {
                 check = 0;
                 cout << "Введите правильный день недели: ";
                 cin >> m_date->day;
             }
         }
-
         if (m_date->month < 1 || m_date->month > 12) {
             check = 0;
             cout << "Введите правильный месяц: "; cin >> m_date->month;
@@ -160,8 +160,9 @@ ElectricityCounter& AccountBook::operator[](Iter index) {
 }
 
 AccountBook::~AccountBook() {
-    cout << "Destructor AccountBook\n";
     delete[] m_accounts;
+    delete m_date;
+    cout << "Destructor AccountBook\n";
 }
 
 istream &operator>>(istream &in, AccountBook &obj) {
@@ -177,22 +178,23 @@ istream &operator>>(istream &in, AccountBook &obj) {
     cout << "Введите месяц: "; in >> obj.m_date->month;
     cout << "Введите год: "; in >> obj.m_date->year;
     obj.date_check();
-
     for (Iter i(obj.begin()); i != obj.end(); ++i) {
         cout << "Введите " << (i - obj.begin()) + 1 << " показание счетчика электричества\n";
-        cin >> obj.m_accounts[i-obj.begin()];
+        in >> obj.m_accounts[i-obj.begin()];
     }
-
     return in;
 }
 
 ostream &operator<<(ostream &out, AccountBook &obj) {
     out << "Цена кВ/ч: " << obj.m_price
-        << "\nДата\n"
+        << "\nДата"
         << "\n\tДень: " << obj.m_date->day
         << "\n\tМесяц: " << obj.m_date->month
         << "\n\tГод: " << obj.m_date->year << endl;
-
+    for (Iter i(obj.begin()); i != obj.end(); ++i) {
+        out << (i - obj.begin()) + 1 << " показание счетчика электричества\n";
+        out << obj.m_accounts[i-obj.begin()];
+    }
     return out;
 }
 
@@ -215,17 +217,16 @@ AccountBook &AccountBook::operator=(const AccountBook &obj) {
     return *this;
 }
 
-float AccountBook::sum_all() {
+float AccountBook::sum_accounts() {
     float sum = 0;
     for (Iter i(begin()); i != end(); ++i) {
         sum += m_accounts[i - begin()].m_counter;
     }
-
     return sum;
 }
 
-float AccountBook::price_all() {
-    int sum = sum_all();
+float AccountBook::price_accounts() {
+    int sum = sum_accounts();
     int pr = sum * m_price;
     return pr;
 }

@@ -27,5 +27,11 @@
   "directory": "C:/Users/Athet/VSCodeProjects/Course_Work/build",
   "command": "C:\\PROGRA~2\\MICROS~1\\2019\\ENTERP~1\\VC\\Tools\\MSVC\\1425~1.286\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd   -std:c++latest /FoCMakeFiles\\Course_Work.dir\\AccountBook.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\Athet\\VSCodeProjects\\Course_Work\\AccountBook.cpp",
   "file": "C:/Users/Athet/VSCodeProjects/Course_Work/AccountBook.cpp"
+},
+
+{
+  "directory": "C:/Users/Athet/VSCodeProjects/Course_Work/build",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\ENTERP~1\\VC\\Tools\\MSVC\\1425~1.286\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd   -std:c++latest /FoCMakeFiles\\Course_Work.dir\\Iter.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\Athet\\VSCodeProjects\\Course_Work\\Iter.cpp",
+  "file": "C:/Users/Athet/VSCodeProjects/Course_Work/Iter.cpp"
 }
 ]

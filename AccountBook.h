@@ -25,23 +25,22 @@ public:
     void add_elem_begin(ElectricityCounter&);
     void add_elem_end(ElectricityCounter&);
 
+    float sum_accounts();
+    float price_accounts();
+
     void set_price(float);
     float get_price();
-
-    float sum_all();
-    float price_all();
+    int get_lenght();
 
     Iter begin();
     Iter end();
 
-    void date_check(); //беды с датой
-
-    int get_lenght();
+    void date_check();
 
     ElectricityCounter& operator[](Iter);
+    AccountBook& operator=(const AccountBook&);
     friend istream& operator>>(istream&, AccountBook&);
     friend ostream& operator<<(ostream&, AccountBook&);
-    AccountBook& operator=(const AccountBook&);
 
     ~AccountBook();
 };

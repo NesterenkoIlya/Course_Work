@@ -50,34 +50,34 @@ The CXX compiler identification is MSVC, found in "C:/Users/Athet/VSCodeProjects
 Determining if the C compiler works passed with the following output:
 Change Dir: C:/Users/Athet/VSCodeProjects/Course_Work/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/PROGRA~2/MICROS~1/2019/ENTERP~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe cmTC_7ad31 && [1/2] Building C object CMakeFiles\cmTC_7ad31.dir\testCCompiler.c.obj
-[2/2] Linking C executable cmTC_7ad31.exe
+Run Build Command(s):C:/PROGRA~2/MICROS~1/2019/ENTERP~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe cmTC_9a046 && [1/2] Building C object CMakeFiles\cmTC_9a046.dir\testCCompiler.c.obj
+[2/2] Linking C executable cmTC_9a046.exe
 
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/Users/Athet/VSCodeProjects/Course_Work/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/PROGRA~2/MICROS~1/2019/ENTERP~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe cmTC_e5065 && [1/2] Building C object CMakeFiles\cmTC_e5065.dir\CMakeCCompilerABI.c.obj
+Run Build Command(s):C:/PROGRA~2/MICROS~1/2019/ENTERP~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe cmTC_1c6e9 && [1/2] Building C object CMakeFiles\cmTC_1c6e9.dir\CMakeCCompilerABI.c.obj
 Примечание: включение файла:  C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeCompilerABI.h
-[2/2] Linking C executable cmTC_e5065.exe
+[2/2] Linking C executable cmTC_1c6e9.exe
 
 
 
 Determining if the CXX compiler works passed with the following output:
 Change Dir: C:/Users/Athet/VSCodeProjects/Course_Work/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/PROGRA~2/MICROS~1/2019/ENTERP~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe cmTC_5ed2f && [1/2] Building CXX object CMakeFiles\cmTC_5ed2f.dir\testCXXCompiler.cxx.obj
-[2/2] Linking CXX executable cmTC_5ed2f.exe
+Run Build Command(s):C:/PROGRA~2/MICROS~1/2019/ENTERP~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe cmTC_c1eec && [1/2] Building CXX object CMakeFiles\cmTC_c1eec.dir\testCXXCompiler.cxx.obj
+[2/2] Linking CXX executable cmTC_c1eec.exe
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/Users/Athet/VSCodeProjects/Course_Work/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/PROGRA~2/MICROS~1/2019/ENTERP~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe cmTC_8b77a && [1/2] Building CXX object CMakeFiles\cmTC_8b77a.dir\CMakeCXXCompilerABI.cpp.obj
+Run Build Command(s):C:/PROGRA~2/MICROS~1/2019/ENTERP~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe cmTC_27929 && [1/2] Building CXX object CMakeFiles\cmTC_27929.dir\CMakeCXXCompilerABI.cpp.obj
 Примечание: включение файла:  C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeCompilerABI.h
-[2/2] Linking CXX executable cmTC_8b77a.exe
+[2/2] Linking CXX executable cmTC_27929.exe
 
 
 
