@@ -5,13 +5,9 @@ void DigitalCounter::value_check() {
 	if (m_counter == m_max_value)
         m_counter = m_min_value;
     else if (m_counter > m_max_value){
-        do {
-            if ((m_counter - m_max_value) < (m_max_value - m_min_value))
-                break;
-            else
-                m_counter -= m_max_value + 1;
-            
-        } while(m_counter > (m_max_value - m_min_value));
+        while (m_counter > (m_max_value - m_min_value)){
+            m_counter -= m_max_value - m_min_value + 1;
+        }
         m_counter += m_min_value;
     }
 }
@@ -35,15 +31,15 @@ DigitalCounter::DigitalCounter(int min_value, int max_value, float counter) {
             cout << "Вы используете неправильное минимальное значение\n"
                  << "минимальное значение должно быть меньше" << max_value
                  << "\nПовторите ввод\n"
-                 << "\nmin_value: "; cin >> min_value;
+                 << "\nmin_value: "; input_check(min_value);
         }
         if (counter < min_value || counter > max_value) {
             check = 0;
             cout << "Вы используете неправильное значение счетчика\n"
                  << "Счетчик должен быть в диапазоне [" << min_value << "; "
-                 << max_value << "]/n"
+                 << max_value << "]\n"
                  << "Повторите ввод\n"
-                 << "counter: "; cin >> counter;
+                 << "counter: "; input_check(counter);
         }
     }
     m_min_value = min_value;
@@ -64,9 +60,9 @@ void DigitalCounter::counter_increment() {
 
 void DigitalCounter::input() {
 	cout << "Class Digital counter\n";
-	cout << "min_value: "; cin >> m_min_value;
-	cout << "max_value: "; cin >> m_max_value;
-	cout << "counter: "; cin >> m_counter;
+	cout << "min_value: "; input_check(m_min_value);
+	cout << "max_value: "; input_check(m_max_value);
+	cout << "counter: "; input_check(m_counter);
 	bool check = 0;
 	while(true) {
 	    if (check == 0)
@@ -75,8 +71,18 @@ void DigitalCounter::input() {
 	        break;
         if (m_min_value > m_max_value) {
             check = 0;
-            cout << "Вы ввели неправилное минимальное значение\n"
-                 << "минимальное значение должно быть меньше";
+            cout << "Вы используете неправильное минимальное значение\n"
+                 << "минимальное значение должно быть меньше" << m_max_value
+                 << "\nПовторите ввод\n"
+                 << "\nmin_value: "; input_check(m_min_value);
+        }
+        if (m_counter < m_min_value || m_counter > m_max_value) {
+            check = 0;
+            cout << "Вы используете неправильное значение счетчика\n"
+                 << "Счетчик должен быть в диапазоне [" << m_min_value << "; "
+                 << m_max_value << "]\n"
+                 << "Повторите ввод\n"
+                 << "counter: "; input_check(m_counter);
         }
 	}
 	value_check();
@@ -120,7 +126,7 @@ void DigitalCounter::operator++(int) {
 	value_check();
 }
 
-void DigitalCounter::operator--(int) {
+void DigitalCounter::operator--(int) {     //Проверочка
 	m_counter--;
 	value_check();
 }
@@ -149,32 +155,32 @@ DigitalCounter& DigitalCounter::operator-=(float right) {
 }
 
 istream& operator>>(istream &in, DigitalCounter &obj) {
-    bool check = 1;
+    cout << "Class Digital counter\n";
+    cout << "min_value: "; obj.input_check(obj.m_min_value, in);
+    cout << "max_value: "; obj.input_check(obj.m_max_value, in);
+    cout << "counter: "; obj.input_check(obj.m_counter, in);
+    bool check = 0;
     while (true) {
-        cout << "min_value: "; in >> obj.m_min_value;
-        cout << "max_value: "; in >> obj.m_max_value;
-        cout << "counter: "; in >> obj.m_counter;
-
-        if (obj.m_max_value < obj.m_min_value)
-            cout << "You input incorrect max_value\n"
-                 << "max_value must be over " << obj.m_min_value;
-
-        if (obj.m_counter > obj.m_max_value || obj.m_counter < obj.m_min_value) {
-            check = 0;
-            cout << "You input incorrect counter\n"
-                 << "counter must be in diapasone from"
-                 << obj.m_min_value << " to " << obj.m_max_value;
-        }
-
-        if (check == 1) {
-            cout << "Input is correct\n";
+        if (check == 0)
+            check = 1;
+        else
             break;
-        } else {
-            cout << "Input is uncorrect\n"
-                 << "Try again\n";
+        if (obj.m_min_value > obj.m_max_value) {
+            check = 0;
+            cout << "Вы используете неправильное минимальное значение\n"
+                 << "минимальное значение должно быть меньше" << obj.m_max_value
+                 << "\nПовторите ввод\n"
+                 << "\nmin_value: "; obj.input_check(obj.m_min_value, in);
+        }
+        if (obj.m_counter < obj.m_min_value || obj.m_counter > obj.m_max_value) {
+            check = 0;
+            cout << "Вы используете неправильное значение счетчика\n"
+                 << "Счетчик должен быть в диапазоне [" << obj.m_min_value << "; "
+                 << obj.m_max_value << "]\n"
+                 << "Повторите ввод\n"
+                 << "counter: "; obj.input_check(obj.m_counter, in);
         }
     }
-
 	return in;
 }
 
@@ -185,4 +191,12 @@ ostream& operator<<(ostream& out, DigitalCounter& obj) {
 		<< "\ncounter = " << obj.m_counter
 		<< endl;
 	return out;
+}
+
+int DigitalCounter::get_min_value() {
+    return m_min_value;
+}
+
+int DigitalCounter::get_max_value() {
+    return m_max_value;
 }

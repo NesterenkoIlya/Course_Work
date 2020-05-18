@@ -43,10 +43,10 @@ RM = /snap/clion/112/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/athet/CLionProjects/git/Course_Work
+CMAKE_SOURCE_DIR = /home/athet/CLionProjects/Course_Work
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/athet/CLionProjects/git/Course_Work/cmake-build-debug
+CMAKE_BINARY_DIR = /home/athet/CLionProjects/Course_Work/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Course_Work.dir/depend.make
@@ -59,81 +59,81 @@ include CMakeFiles/Course_Work.dir/flags.make
 
 CMakeFiles/Course_Work.dir/main.cpp.o: CMakeFiles/Course_Work.dir/flags.make
 CMakeFiles/Course_Work.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/athet/CLionProjects/git/Course_Work/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Course_Work.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Course_Work.dir/main.cpp.o -c /home/athet/CLionProjects/git/Course_Work/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/athet/CLionProjects/Course_Work/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Course_Work.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Course_Work.dir/main.cpp.o -c /home/athet/CLionProjects/Course_Work/main.cpp
 
 CMakeFiles/Course_Work.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Course_Work.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/athet/CLionProjects/git/Course_Work/main.cpp > CMakeFiles/Course_Work.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/athet/CLionProjects/Course_Work/main.cpp > CMakeFiles/Course_Work.dir/main.cpp.i
 
 CMakeFiles/Course_Work.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Course_Work.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/athet/CLionProjects/git/Course_Work/main.cpp -o CMakeFiles/Course_Work.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/athet/CLionProjects/Course_Work/main.cpp -o CMakeFiles/Course_Work.dir/main.cpp.s
 
 CMakeFiles/Course_Work.dir/Counter.cpp.o: CMakeFiles/Course_Work.dir/flags.make
 CMakeFiles/Course_Work.dir/Counter.cpp.o: ../Counter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/athet/CLionProjects/git/Course_Work/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Course_Work.dir/Counter.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Course_Work.dir/Counter.cpp.o -c /home/athet/CLionProjects/git/Course_Work/Counter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/athet/CLionProjects/Course_Work/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Course_Work.dir/Counter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Course_Work.dir/Counter.cpp.o -c /home/athet/CLionProjects/Course_Work/Counter.cpp
 
 CMakeFiles/Course_Work.dir/Counter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Course_Work.dir/Counter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/athet/CLionProjects/git/Course_Work/Counter.cpp > CMakeFiles/Course_Work.dir/Counter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/athet/CLionProjects/Course_Work/Counter.cpp > CMakeFiles/Course_Work.dir/Counter.cpp.i
 
 CMakeFiles/Course_Work.dir/Counter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Course_Work.dir/Counter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/athet/CLionProjects/git/Course_Work/Counter.cpp -o CMakeFiles/Course_Work.dir/Counter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/athet/CLionProjects/Course_Work/Counter.cpp -o CMakeFiles/Course_Work.dir/Counter.cpp.s
 
 CMakeFiles/Course_Work.dir/DigitalCounter.cpp.o: CMakeFiles/Course_Work.dir/flags.make
 CMakeFiles/Course_Work.dir/DigitalCounter.cpp.o: ../DigitalCounter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/athet/CLionProjects/git/Course_Work/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Course_Work.dir/DigitalCounter.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Course_Work.dir/DigitalCounter.cpp.o -c /home/athet/CLionProjects/git/Course_Work/DigitalCounter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/athet/CLionProjects/Course_Work/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Course_Work.dir/DigitalCounter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Course_Work.dir/DigitalCounter.cpp.o -c /home/athet/CLionProjects/Course_Work/DigitalCounter.cpp
 
 CMakeFiles/Course_Work.dir/DigitalCounter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Course_Work.dir/DigitalCounter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/athet/CLionProjects/git/Course_Work/DigitalCounter.cpp > CMakeFiles/Course_Work.dir/DigitalCounter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/athet/CLionProjects/Course_Work/DigitalCounter.cpp > CMakeFiles/Course_Work.dir/DigitalCounter.cpp.i
 
 CMakeFiles/Course_Work.dir/DigitalCounter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Course_Work.dir/DigitalCounter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/athet/CLionProjects/git/Course_Work/DigitalCounter.cpp -o CMakeFiles/Course_Work.dir/DigitalCounter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/athet/CLionProjects/Course_Work/DigitalCounter.cpp -o CMakeFiles/Course_Work.dir/DigitalCounter.cpp.s
 
 CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.o: CMakeFiles/Course_Work.dir/flags.make
 CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.o: ../ElectricityCounter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/athet/CLionProjects/git/Course_Work/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.o -c /home/athet/CLionProjects/git/Course_Work/ElectricityCounter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/athet/CLionProjects/Course_Work/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.o -c /home/athet/CLionProjects/Course_Work/ElectricityCounter.cpp
 
 CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/athet/CLionProjects/git/Course_Work/ElectricityCounter.cpp > CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/athet/CLionProjects/Course_Work/ElectricityCounter.cpp > CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.i
 
 CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/athet/CLionProjects/git/Course_Work/ElectricityCounter.cpp -o CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/athet/CLionProjects/Course_Work/ElectricityCounter.cpp -o CMakeFiles/Course_Work.dir/ElectricityCounter.cpp.s
 
 CMakeFiles/Course_Work.dir/AccountBook.cpp.o: CMakeFiles/Course_Work.dir/flags.make
 CMakeFiles/Course_Work.dir/AccountBook.cpp.o: ../AccountBook.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/athet/CLionProjects/git/Course_Work/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Course_Work.dir/AccountBook.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Course_Work.dir/AccountBook.cpp.o -c /home/athet/CLionProjects/git/Course_Work/AccountBook.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/athet/CLionProjects/Course_Work/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Course_Work.dir/AccountBook.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Course_Work.dir/AccountBook.cpp.o -c /home/athet/CLionProjects/Course_Work/AccountBook.cpp
 
 CMakeFiles/Course_Work.dir/AccountBook.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Course_Work.dir/AccountBook.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/athet/CLionProjects/git/Course_Work/AccountBook.cpp > CMakeFiles/Course_Work.dir/AccountBook.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/athet/CLionProjects/Course_Work/AccountBook.cpp > CMakeFiles/Course_Work.dir/AccountBook.cpp.i
 
 CMakeFiles/Course_Work.dir/AccountBook.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Course_Work.dir/AccountBook.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/athet/CLionProjects/git/Course_Work/AccountBook.cpp -o CMakeFiles/Course_Work.dir/AccountBook.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/athet/CLionProjects/Course_Work/AccountBook.cpp -o CMakeFiles/Course_Work.dir/AccountBook.cpp.s
 
 CMakeFiles/Course_Work.dir/Iter.cpp.o: CMakeFiles/Course_Work.dir/flags.make
 CMakeFiles/Course_Work.dir/Iter.cpp.o: ../Iter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/athet/CLionProjects/git/Course_Work/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Course_Work.dir/Iter.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Course_Work.dir/Iter.cpp.o -c /home/athet/CLionProjects/git/Course_Work/Iter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/athet/CLionProjects/Course_Work/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Course_Work.dir/Iter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Course_Work.dir/Iter.cpp.o -c /home/athet/CLionProjects/Course_Work/Iter.cpp
 
 CMakeFiles/Course_Work.dir/Iter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Course_Work.dir/Iter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/athet/CLionProjects/git/Course_Work/Iter.cpp > CMakeFiles/Course_Work.dir/Iter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/athet/CLionProjects/Course_Work/Iter.cpp > CMakeFiles/Course_Work.dir/Iter.cpp.i
 
 CMakeFiles/Course_Work.dir/Iter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Course_Work.dir/Iter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/athet/CLionProjects/git/Course_Work/Iter.cpp -o CMakeFiles/Course_Work.dir/Iter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/athet/CLionProjects/Course_Work/Iter.cpp -o CMakeFiles/Course_Work.dir/Iter.cpp.s
 
 # Object files for target Course_Work
 Course_Work_OBJECTS = \
@@ -155,7 +155,7 @@ Course_Work: CMakeFiles/Course_Work.dir/AccountBook.cpp.o
 Course_Work: CMakeFiles/Course_Work.dir/Iter.cpp.o
 Course_Work: CMakeFiles/Course_Work.dir/build.make
 Course_Work: CMakeFiles/Course_Work.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/athet/CLionProjects/git/Course_Work/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Course_Work"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/athet/CLionProjects/Course_Work/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Course_Work"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Course_Work.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -168,6 +168,6 @@ CMakeFiles/Course_Work.dir/clean:
 .PHONY : CMakeFiles/Course_Work.dir/clean
 
 CMakeFiles/Course_Work.dir/depend:
-	cd /home/athet/CLionProjects/git/Course_Work/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/athet/CLionProjects/git/Course_Work /home/athet/CLionProjects/git/Course_Work /home/athet/CLionProjects/git/Course_Work/cmake-build-debug /home/athet/CLionProjects/git/Course_Work/cmake-build-debug /home/athet/CLionProjects/git/Course_Work/cmake-build-debug/CMakeFiles/Course_Work.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/athet/CLionProjects/Course_Work/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/athet/CLionProjects/Course_Work /home/athet/CLionProjects/Course_Work /home/athet/CLionProjects/Course_Work/cmake-build-debug /home/athet/CLionProjects/Course_Work/cmake-build-debug /home/athet/CLionProjects/Course_Work/cmake-build-debug/CMakeFiles/Course_Work.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Course_Work.dir/depend
 

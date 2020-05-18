@@ -13,13 +13,15 @@ public:
 	DigitalCounter(DigitalCounter &);
 
 	void counter_increment();
-	void input();
+    void input();
 	void output();
 
 	void print_counter() override;
 
 	void set_min_value(int);
+	int get_min_value();
 	void set_max_value(int);
+	int get_max_value();
 	float get_counter();
 
 	void operator()(int, int, float);

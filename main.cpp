@@ -13,10 +13,11 @@ void Debug();
 
 int main() {
 	system("chcp 1251");
-	cout << "Привет мир";
+    Debug();
 }
 
 void Debug() {
-	AccountBook test(1, 29, 2, 1600);
-	cout << test;
+    ElectricityCounter test;
+    cin >> test;
+    cout << test;
 }

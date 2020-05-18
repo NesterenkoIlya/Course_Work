@@ -35,7 +35,7 @@ void ElectricityCounter::operator=(float counter) {
         }
         cout << "Вы используете неправильное значение счетчика\nПовторите ввод\n"
              << "счетчик должен быть в диапазоне [" << m_min_value << "; " << m_max_value << "]\n"
-             << "counter: "; cin >> counter;
+             << "counter: "; input_check(counter);
     }
 }
 
@@ -48,7 +48,8 @@ ElectricityCounter &ElectricityCounter::operator=(const ElectricityCounter &obj)
     return *this;
 }
 
-float ElectricityCounter::operator*() { //Определение текущего значения счетчика
+//Определение текущего значения счетчика
+float ElectricityCounter::operator*() {
     return m_counter;
 }
 
@@ -58,11 +59,11 @@ ElectricityCounter::~ElectricityCounter() {
 }
 
 istream &operator>>(istream &in, ElectricityCounter &obj) {
-    cout << "bit_number: "; in >> *obj.m_bit_number;
-    cout << "precision: "; in >> obj.m_precision;
-    cout << "min_value: "; in >> obj.m_min_value;
-    cout << "max_value: "; in >> obj.m_max_value;
-    cout << "counter: "; in >> obj.m_counter;
+    cout << "bit_number: "; obj.input_check(*obj.m_bit_number, in);
+    cout << "precision: "; obj.input_check(obj.m_precision, in);
+    cout << "min_value: "; obj.input_check(obj.m_min_value, in);
+    cout << "max_value: "; obj.input_check(obj.m_max_value, in);
+    cout << "counter: "; obj.input_check(obj.m_counter, in);
     bool check = 0;
     while (true) {
         if (check == 0) {
@@ -74,20 +75,20 @@ istream &operator>>(istream &in, ElectricityCounter &obj) {
             check = 0;
             cout << "Вы ввели неправильную разрядность\n"
                  << "Разрядность должна быть больше 1\n"
-                 << "bit_number: "; in >> *obj.m_bit_number;
+                 << "bit_number: "; obj.input_check(*obj.m_bit_number, in);
         }
         if (obj.m_precision < 0) {
             check = 0;
             cout << "Вы ввели неправильную точность\n"
                  << "Точность должна быть больше 0\n"
-                 << "precision: "; in >> obj.m_precision;
+                 << "precision: "; obj.input_check(obj.m_precision, in);
         }
 
         if (obj.m_min_value > obj.m_max_value) {
             check = 0;
             cout << "Вы ввели неправильное минимальное значение\n"
                  << "Минимальное значение должно быть меньше " << obj.m_max_value
-                 << "\nmin_value: "; in >> obj.m_min_value;
+                 << "\nmin_value: "; obj.input_check(obj.m_min_value, in);
         }
 
         int power = pow(10, *obj.m_bit_number);
@@ -96,7 +97,7 @@ istream &operator>>(istream &in, ElectricityCounter &obj) {
             cout << "Вы ввели неправильное максимальное значение\n"
                  << "максимальное значение должно быть в диапазоне [" << obj.m_min_value
                  << "; " << power << "]\n"
-                 << "\nmax_value: "; in >> obj.m_max_value;
+                 << "\nmax_value: "; obj.input_check(obj.m_max_value, in);
         }
 
         if (obj.m_counter > obj.m_max_value || obj.m_counter < obj.m_min_value) {
@@ -104,7 +105,7 @@ istream &operator>>(istream &in, ElectricityCounter &obj) {
             cout << "Вы ввели неправильное значение счетчика\n"
                  << "счетчик должен быть в диапазоне [" << obj.m_min_value
                  << "; " << obj.m_max_value << "]"
-                 << "\ncounter: "; in >> obj.m_counter;
+                 << "\ncounter: "; obj.input_check(obj.m_counter, in);
         }
     }
     return in;
@@ -113,7 +114,6 @@ istream &operator>>(istream &in, ElectricityCounter &obj) {
 ostream &operator<<(ostream &out, ElectricityCounter &obj) {
     out << setprecision(obj.m_precision) << fixed;
     out << "Counter = " << obj.m_counter << endl;
-    out << obj.m_max_value << endl;
     out << setprecision(6); //Стандартный setprecision
     out.unsetf(ios::fixed); //Убирает флаг fixed из потока
     return out;
@@ -122,7 +122,7 @@ ostream &operator<<(ostream &out, ElectricityCounter &obj) {
 void ElectricityCounter::set_bit_number(int *bit_number) {
     while (*bit_number < 1) {
         cout << "Вы используете неправильную разрядность\nПовторите ввод: ";
-        cin >> *bit_number;
+        input_check(*bit_number);
     }
     m_bit_number = bit_number;
 }
@@ -134,11 +134,15 @@ int ElectricityCounter::get_bit_number() {
 void ElectricityCounter::set_precision(int precision) {
     while (precision < 0) {
         cout << "Вы используете неправильную разрядность\nПовторите ввод: ";
-        cin >> precision;
+        input_check(precision);
     }
     m_precision = precision;
 }
 
 int ElectricityCounter::get_precision() {
     return m_precision;
+}
+
+void ElectricityCounter::input_counter() {
+    DigitalCounter::input_counter();
 }
