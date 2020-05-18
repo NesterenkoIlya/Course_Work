@@ -14,10 +14,12 @@ void Debug();
 int main() {
 	system("chcp 1251");
     Debug();
+
 }
 
 void Debug() {
-    ElectricityCounter test;
+    AccountBook test;
     cin >> test;
-    cout << test;
+    ofstream fout("output.txt");
+    fout << test;
 }

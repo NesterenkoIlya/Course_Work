@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Iter.h"
+#include "Counter.h"
 
 class AccountBook {
     int m_length;
@@ -15,7 +16,8 @@ class AccountBook {
     } *m_date;
 public:
     AccountBook();
-    AccountBook(int, int, int, int);
+    AccountBook(int);
+    AccountBook(int, float, int, int, int);
     AccountBook(const AccountBook&);
 
     void erase();
@@ -30,6 +32,7 @@ public:
 
     void set_price(float);
     float get_price();
+    void set_lenght(int);
     int get_lenght();
 
     Iter begin();
@@ -41,6 +44,8 @@ public:
     AccountBook& operator=(const AccountBook&);
     friend istream& operator>>(istream&, AccountBook&);
     friend ostream& operator<<(ostream&, AccountBook&);
+    friend ifstream& operator>>(ifstream&, AccountBook&);
+    friend ofstream& operator<<(ofstream&, AccountBook&);
 
     ~AccountBook();
 };

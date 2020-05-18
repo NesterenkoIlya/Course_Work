@@ -12,7 +12,7 @@ public:
     //Переопределенный метод для вывода текущего значения счетчика
     void print_counter() override final;
 
-    //Вод текущего значения счетчика
+    //Ввод текущего значения счетчика
     friend istream &operator>>(istream &, ElectricityCounter &);
     //Вывод текущего значения счетчика
     friend ostream &operator<<(ostream &, ElectricityCounter &);

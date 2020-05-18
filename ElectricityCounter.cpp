@@ -23,8 +23,8 @@ void ElectricityCounter::print_counter() {
     cout << setprecision(m_precision) << fixed
          << "Class ElectricityCounter\n"
          << "counter = " << m_counter
-         << setprecision(6);
-    cout.unsetf(ios::fixed);
+         << setprecision(6);    //Стандартный setprecision
+    cout.unsetf(ios::fixed);    //Снимает флаг fixed
 }
 
 void ElectricityCounter::operator=(float counter) {
@@ -141,8 +141,4 @@ void ElectricityCounter::set_precision(int precision) {
 
 int ElectricityCounter::get_precision() {
     return m_precision;
-}
-
-void ElectricityCounter::input_counter() {
-    DigitalCounter::input_counter();
 }

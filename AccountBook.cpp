@@ -14,7 +14,7 @@ AccountBook::Date::Date(int d, int m, int y) {
 
 AccountBook::AccountBook() : m_length(0), m_accounts(nullptr), m_price(0), m_date(new Date()) { }
 
-AccountBook::AccountBook(int length, int d, int m, int y) {
+AccountBook::AccountBook(int length, float price, int d, int m, int y) {
     try {
         if (length < 0)
             throw "Lenght Error\n";
@@ -30,7 +30,19 @@ AccountBook::AccountBook(int length, int d, int m, int y) {
     } catch (string i) {
         cerr << i;
     }
-
+    bool check = 0;
+    while (true) {
+        if (check == 0)
+            check = 1;
+        else
+            break;
+        if (price < 0) {
+            cout << "Вы ввели неправильную стоимость кВ/ч\n"
+                 << "Стоимость должна быть больше 0\nПовторите ввод\n"
+                 << "price: "; Counter::input_check(price);
+        }
+    }
+    m_price = price;
     m_date = new Date(d, m ,y);
     date_check();
 }
@@ -238,4 +250,49 @@ void AccountBook::set_price(float price) {
              << "price: "; cin >> price;
     }
     m_price = price;
+}
+
+float AccountBook::get_price() {
+    return m_price;
+}
+
+ifstream &operator>>(ifstream &fin, AccountBook &obj) {
+    return fin;
+}
+
+ofstream &operator<<(ofstream &fout, AccountBook &obj) {
+    fout << "Расчетная книга\n"
+         << "Cтоимость кВ/ч = " << obj.m_price
+         << "\nДата:\n"
+         << "\tдень: " << obj.m_date->day
+         << "\n\tмесяц: " << obj.m_date->month
+         << "\n\tгод: " << obj.m_date->year << endl;
+
+    fout << "Показания счетчика\n";
+
+    for (Iter i(obj.begin()); i != obj.end(); ++i) {
+        fout << (i - obj.begin()) + 1 << " показание счетчика электричества\n";
+        fout << obj.m_accounts[i-obj.begin()] << endl;
+    }
+
+    fout << "Общее колличество киловат: " << obj.sum_accounts() << endl;
+    fout << "Общая стоимость: " << obj.price_accounts() << endl;
+
+    return fout;
+}
+
+AccountBook::AccountBook(int lenght) {
+    bool check = 0;
+    while(true) {
+        if (check == 0)
+            check = 1;
+        else
+            break;
+        if (lenght < 0) {
+            cout << "Вы ввели неправильный размер\n"
+                 << "Размер должен быть больше 0\n"
+                 << "Повторите ввод: "; input_check(lenght);
+        }
+    }
+
 }

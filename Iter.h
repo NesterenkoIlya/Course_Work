@@ -8,7 +8,6 @@ public:
     explicit Iter(ElectricityCounter*); //Конструктор иницииализации
     Iter(const Iter& x);    //Конструктор копирования
     Iter& operator=(const Iter& x); //Перегрузка оператора присваивания
-    void operator=(int);    //Перемещает итератор в указанное место
     ElectricityCounter& operator*() const;  //Возвращает разименованое поле данных
     Iter& operator++();
     Iter& operator--();
