@@ -14,6 +14,25 @@ AccountBook::Date::Date(int d, int m, int y) {
 
 AccountBook::AccountBook() : m_length(0), m_accounts(nullptr), m_price(0), m_date(new Date()) { }
 
+AccountBook::AccountBook(int lenght) {
+    bool check = 0;
+    while (true) {
+        if (check == 0)
+            check = 1;
+        else
+            break;
+        if (lenght < 0) {
+            cout << "Вы ввели неправильный размер\n"
+                << "Размер должен быть больше 0\n"
+                << "Повторите ввод: "; Counter::input_check(lenght);
+        }
+    }
+    m_price = 0;
+    m_date = new Date();
+    m_accounts = new ElectricityCounter[lenght];
+    m_length = lenght;
+}
+
 AccountBook::AccountBook(int length, float price, int d, int m, int y) {
     try {
         if (length < 0)
@@ -48,6 +67,9 @@ AccountBook::AccountBook(int length, float price, int d, int m, int y) {
 }
 
 AccountBook::AccountBook(const AccountBook& obj) {
+    m_price = obj.m_price;
+    m_length = obj.m_length;
+    m_date = new Date(obj.m_date->day, obj.m_date->month, obj.m_date->year);
     m_length = obj.m_length;
     if (obj.m_accounts) {
         m_accounts = new ElectricityCounter[m_length];
@@ -63,22 +85,22 @@ void AccountBook::erase() {
     m_length = 0;
 }
 
-void AccountBook::resize(int new_lenght) {
-    if (new_lenght == m_length)
+void AccountBook::resize(int new_length) {
+    if (new_length == m_length)
         return;
-    else if (new_lenght <= 0) {
+    else if (new_length <= 0) {
         erase();
         return;
     }
-    ElectricityCounter *tmp = new ElectricityCounter[new_lenght];
+    ElectricityCounter *tmp = new ElectricityCounter[new_length];
 
-    int copy = (m_length > new_lenght) ? new_lenght : m_length;
+    int copy = (m_length > new_length) ? new_length : m_length;
     for (Iter i(begin()); i != begin() + copy; ++i)
         tmp[i - begin()] = m_accounts[i-begin()];
 
     delete[] m_accounts;
     m_accounts = tmp;
-    m_length = new_lenght;
+    m_length = new_length;
 }
 
 void AccountBook::add_element(ElectricityCounter& elem, Iter index) {
@@ -86,7 +108,7 @@ void AccountBook::add_element(ElectricityCounter& elem, Iter index) {
         cout << "Вы ввели неправильный индекс\n"
              << "Повторите ввод индеска от 0 до " << m_length << ": ";
         int n;
-        cin >> n;
+        Counter::input_check(n);
         index = begin() + n;
     }
 
@@ -104,6 +126,13 @@ void AccountBook::add_element(ElectricityCounter& elem, Iter index) {
 }
 
 void AccountBook::remove_element(Iter index) {
+    while (index < begin() || index >= end()) {
+        cout << "Вы ввели неправильный индекс\n"
+            << "Повторите ввод индеска от 0 до " << m_length << ": ";
+        int n;
+        Counter::input_check(n);
+        index = begin() + n;
+    }
     ElectricityCounter *tmp = new ElectricityCounter[m_length - 1];
     for (Iter i(begin()); i != index; ++i)
         tmp[i - begin()] = m_accounts[i - begin()];
@@ -135,23 +164,23 @@ void AccountBook::date_check() {
              (m_date->month == 4 || m_date->month == 6 || m_date->month == 9 || m_date->month == 11))) {
             check = 0;
             cout << "Введите правильный день недели: ";
-            cin >> m_date->day;
+            Counter::input_check(m_date->day);
         } else if (m_date->month == 2 && m_date->day > 28) {
             if ((m_date->year % 400 == 0) ? true : (m_date->year % 4 == 0 && m_date->year % 100 != 0) && m_date->day == 29) {
                 check = 1;
             } else if (m_date->day > 28) {
                 check = 0;
                 cout << "Введите правильный день недели: ";
-                cin >> m_date->day;
+                Counter::input_check(m_date->day);
             }
         }
         if (m_date->month < 1 || m_date->month > 12) {
             check = 0;
-            cout << "Введите правильный месяц: "; cin >> m_date->month;
+            cout << "Введите правильный месяц: "; Counter::input_check(m_date->month);
         }
         if (m_date->year < 0) {
             check = 0;
-            cout << "Ввеите правильный год: "; cin >> m_date->year;
+            cout << "Ввеите правильный год: "; Counter::input_check(m_date->year);
         }
     }
 }
@@ -160,12 +189,18 @@ int AccountBook::get_lenght() {
      return m_length;
 }
 
+void AccountBook::set_date(int d, int m, int y) {
+    delete m_date;
+    m_date = new Date(d, m, y);
+    date_check();
+}
+
 ElectricityCounter& AccountBook::operator[](Iter index) {
     int n;
     while (index < begin() || index >= end()) {
         cout << "Вы использовали неправильный индекс\n"
              << "Введите индекс от 0 до " << m_length - 1 << ": ";
-        cin >> n;
+        Counter::input_check(n);
         index = begin() + n;
     }
     return *index;
@@ -179,17 +214,17 @@ AccountBook::~AccountBook() {
 
 istream &operator>>(istream &in, AccountBook &obj) {
     while (true) {
-        cout << "Введите стоимость кВ/ч: "; in >> obj.m_price;
+        cout << "Введите стоимость кВ/ч: "; Counter::input_check(obj.m_price, in);
         if (obj.m_price < 0)
             cout << "Вы ввели не правильную стоимость. Повторите ввод";
         else
             break;
     }
-
-    cout << "Введите день: "; in >> obj.m_date->day;
-    cout << "Введите месяц: "; in >> obj.m_date->month;
-    cout << "Введите год: "; in >> obj.m_date->year;
-    obj.date_check();
+    int d, m, y;
+    cout << "Введите день: "; Counter::input_check(d);
+    cout << "Введите месяц: ";Counter::input_check(m);
+    cout << "Введите год: ";  Counter::input_check(y);
+    obj.set_date(d, m, y);
     for (Iter i(obj.begin()); i != obj.end(); ++i) {
         cout << "Введите " << (i - obj.begin()) + 1 << " показание счетчика электричества\n";
         in >> obj.m_accounts[i-obj.begin()];
@@ -238,16 +273,16 @@ float AccountBook::sum_accounts() {
 }
 
 float AccountBook::price_accounts() {
-    int sum = sum_accounts();
-    int pr = sum * m_price;
-    return pr;
+    float sum = sum_accounts();
+    float price = sum * m_price;
+    return price;
 }
 
 void AccountBook::set_price(float price) {
     while (price < 0) {
         cout << "Вы используете неправильную стоимость кВ/ч\n"
              << "Повторите ввод\n"
-             << "price: "; cin >> price;
+             << "price: "; Counter::input_check(price);
     }
     m_price = price;
 }
@@ -256,7 +291,30 @@ float AccountBook::get_price() {
     return m_price;
 }
 
+void AccountBook::set_lenght(int length) {
+    bool check = 0;
+    while (true) {
+        if (check == 0)
+            check = 1;
+        else
+            break;
+        if (length < 0) {
+            cout << "Вы ввели неправильный размер\n"
+                << "Размер должен быть больше 0\n"
+                << "Повторите ввод: "; Counter::input_check(length);
+        }
+    }
+    m_length = length;
+}
+
 ifstream &operator>>(ifstream &fin, AccountBook &obj) {
+    obj.m_accounts = new ElectricityCounter[0];
+    int i = 1;
+    while (!fin.eof()) {
+        obj.resize(i);
+        fin >> obj.m_accounts[i-1];
+        i++;
+    }
     return fin;
 }
 
@@ -268,31 +326,15 @@ ofstream &operator<<(ofstream &fout, AccountBook &obj) {
          << "\n\tмесяц: " << obj.m_date->month
          << "\n\tгод: " << obj.m_date->year << endl;
 
-    fout << "Показания счетчика\n";
+    fout << "\nПоказания счетчика\n";
 
     for (Iter i(obj.begin()); i != obj.end(); ++i) {
         fout << (i - obj.begin()) + 1 << " показание счетчика электричества\n";
         fout << obj.m_accounts[i-obj.begin()] << endl;
     }
 
-    fout << "Общее колличество киловат: " << obj.sum_accounts() << endl;
+    fout << endl << "Общее колличество киловат: " << obj.sum_accounts() << endl;
     fout << "Общая стоимость: " << obj.price_accounts() << endl;
 
     return fout;
-}
-
-AccountBook::AccountBook(int lenght) {
-    bool check = 0;
-    while(true) {
-        if (check == 0)
-            check = 1;
-        else
-            break;
-        if (lenght < 0) {
-            cout << "Вы ввели неправильный размер\n"
-                 << "Размер должен быть больше 0\n"
-                 << "Повторите ввод: "; input_check(lenght);
-        }
-    }
-
 }
