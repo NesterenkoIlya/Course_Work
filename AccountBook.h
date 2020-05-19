@@ -34,6 +34,7 @@ public:
     float get_price();
     void set_lenght(int);
     int get_lenght();
+    void set_date(int, int, int);
 
     Iter begin();
     Iter end();

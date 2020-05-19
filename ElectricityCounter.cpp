@@ -1,7 +1,10 @@
-#include "ElectricityCounter.h"
+﻿#include "ElectricityCounter.h"
+#include <fstream>
 
 ElectricityCounter::ElectricityCounter() {
-    DigitalCounter(0, 0, 0);
+    set_min_value(0);
+    set_max_value(1);
+    set_counter(0);
     m_bit_number = new int(1);
     m_precision = 0;
 }
@@ -15,14 +18,14 @@ DigitalCounter(min_value, max_value, counter) {
 ElectricityCounter::ElectricityCounter(ElectricityCounter& obj) {
     m_min_value = obj.m_min_value;
     m_max_value = obj.m_max_value;
-    m_bit_number = new int(*obj.m_bit_number);  //Глубинное копирование, так как мы не присваиваем адресс, а само значение
+    m_bit_number = new int(*obj.m_bit_number);  //Глубинное копирование
     m_precision = obj.m_precision;
 }
 
 void ElectricityCounter::print_counter() {
     cout << setprecision(m_precision) << fixed
          << "Class ElectricityCounter\n"
-         << "counter = " << m_counter
+         << "counter = " << m_counter << endl
          << setprecision(6);    //Стандартный setprecision
     cout.unsetf(ios::fixed);    //Снимает флаг fixed
 }
@@ -119,12 +122,36 @@ ostream &operator<<(ostream &out, ElectricityCounter &obj) {
     return out;
 }
 
-void ElectricityCounter::set_bit_number(int *bit_number) {
-    while (*bit_number < 1) {
+ifstream& operator>>(ifstream& fin, ElectricityCounter& obj) {
+    int min_value, max_value, bit_number, precision;
+    float counter;
+    fin >> min_value; obj.set_min_value(min_value);
+    fin >> max_value; obj.set_max_value(max_value);
+    fin >> counter; obj.set_counter(counter);
+    fin >> bit_number; obj.set_bit_number(bit_number);
+    fin >> precision; obj.set_precision(precision);
+    return fin;
+}
+
+ofstream& operator<<(ofstream& fout, ElectricityCounter& obj) {
+    fout << "Class ElectricityCounter\n"
+        << "min_value: " << obj.m_min_value
+        << "\nmax_value: " << obj.m_max_value
+        << "\nbit_number: " << *obj.m_bit_number
+        << "\nprecision: " << obj.m_precision;
+    fout.fixed;
+    fout << setprecision(obj.m_precision)
+        << "\ncounter: " << obj.m_counter << setprecision(6) << endl;
+    fout.unsetf(ios::fixed);
+    return fout;
+}
+
+void ElectricityCounter::set_bit_number(int bit_number) {
+    while (bit_number < 1) {
         cout << "Вы используете неправильную разрядность\nПовторите ввод: ";
-        input_check(*bit_number);
+        input_check(bit_number);
     }
-    m_bit_number = bit_number;
+    *m_bit_number = bit_number;
 }
 
 int ElectricityCounter::get_bit_number() {

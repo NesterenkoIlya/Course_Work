@@ -1,4 +1,4 @@
-//#include "DigitalCounter.h"
+﻿//#include "DigitalCounter.h"
 #include "ElectricityCounter.h"
 #include "AccountBook.h"
 #include <Windows.h>

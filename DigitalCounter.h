@@ -22,6 +22,7 @@ public:
 	int get_min_value();
 	void set_max_value(int);
 	int get_max_value();
+	void set_counter(float);
 	float get_counter();
 
 	void operator()(int, int, float);
@@ -30,8 +31,10 @@ public:
 	DigitalCounter& operator+=(float);
 	DigitalCounter& operator-=(float);
 	DigitalCounter& operator=(const DigitalCounter &);
-	friend istream &operator>>(istream &, DigitalCounter &);
-	friend ostream &operator<<(ostream &, DigitalCounter &);
+	friend istream& operator>>(istream&, DigitalCounter&);
+	friend ostream& operator<<(ostream&, DigitalCounter&);
+	friend ifstream& operator>>(ifstream&, DigitalCounter&);
+	friend ofstream& operator<<(ofstream&, DigitalCounter&);
 
 	virtual ~DigitalCounter();
 };

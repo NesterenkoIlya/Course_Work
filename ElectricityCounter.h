@@ -21,9 +21,11 @@ public:
     //Получение текущего значения счетчика
     float operator*();
     ElectricityCounter &operator=(const ElectricityCounter&);
+    friend ifstream& operator>>(ifstream&, ElectricityCounter&);
+    friend ofstream& operator<<(ofstream&, ElectricityCounter&);
 
     //Сеттеры и геттеры полей класса
-    void set_bit_number(int*);
+    void set_bit_number(int);
     int get_bit_number();
     void set_precision(int);
     int get_precision();

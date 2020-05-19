@@ -1,14 +1,13 @@
-#include "DigitalCounter.h"
+﻿#include "DigitalCounter.h"
 
 //Сбрасывает счетчик в начальное положение при достижении максиммального значения
 void DigitalCounter::value_check() {
 	if (m_counter == m_max_value)
         m_counter = m_min_value;
     else if (m_counter > m_max_value){
-        while (m_counter > (m_max_value - m_min_value)){
+        while (m_counter > m_max_value){
             m_counter -= m_max_value - m_min_value + 1;
         }
-        m_counter += m_min_value;
     }
 }
 
@@ -51,6 +50,7 @@ DigitalCounter::DigitalCounter(int min_value, int max_value, float counter) {
 DigitalCounter::DigitalCounter(DigitalCounter &obj) {
     m_counter = obj.m_counter;
     m_min_value = obj.m_min_value;
+    m_max_value = obj.m_max_value;
 }
 
 void DigitalCounter::counter_increment() {
@@ -72,9 +72,9 @@ void DigitalCounter::input() {
         if (m_min_value > m_max_value) {
             check = 0;
             cout << "Вы используете неправильное минимальное значение\n"
-                 << "минимальное значение должно быть меньше" << m_max_value
+                 << "минимальное значение должно быть меньше " << m_max_value
                  << "\nПовторите ввод\n"
-                 << "\nmin_value: "; input_check(m_min_value);
+                 << "min_value: "; input_check(m_min_value);
         }
         if (m_counter < m_min_value || m_counter > m_max_value) {
             check = 0;
@@ -85,7 +85,6 @@ void DigitalCounter::input() {
                  << "counter: "; input_check(m_counter);
         }
 	}
-	value_check();
 }
 
 void DigitalCounter::output() {
@@ -193,10 +192,29 @@ ostream& operator<<(ostream& out, DigitalCounter& obj) {
 	return out;
 }
 
+ifstream& operator>>(ifstream& fin, DigitalCounter& obj) {
+    fin >> obj.m_min_value;
+    fin >> obj.m_max_value;
+    fin >> obj.m_counter;
+    return fin;
+}
+
+ofstream& operator<<(ofstream& fout, DigitalCounter& obj) {
+    fout << "Class DigitalCounter\n"
+        << "min_value: " << obj.m_min_value
+        << "\nmax_value: " << obj.m_max_value
+        << "\ncounter: " << obj.m_counter << endl;
+    return fout;
+}
+
 int DigitalCounter::get_min_value() {
     return m_min_value;
 }
 
 int DigitalCounter::get_max_value() {
     return m_max_value;
+}
+
+void DigitalCounter::set_counter(float counter) {
+    m_counter = counter;
 }
